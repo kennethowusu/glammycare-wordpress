@@ -74,7 +74,7 @@
 		<nav class="main-navbar">
 			<div class="container">
 				<!-- menu -->
-				<ul class="main-menu">
+				<!-- <ul class="main-menu">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Women</a></li>
 					<li><a href="#">Men</a></li>
@@ -100,7 +100,18 @@
 						</ul>
 					</li>
 					<li><a href="#">Blog</a></li>
-				</ul>
+				</ul> -->
+
+							<?php $defaults = array(
+			    'theme_location'  => 'primary' ,
+			    'menu_class'      => 'main-menu',
+			    'echo'            => true,
+			    'depth'           => 0
+
+			);
+			?>
+
+			<?php wp_nav_menu( $defaults ); ?>
 			</div>
 		</nav>
 	</header>
