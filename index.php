@@ -3,7 +3,7 @@
 <!-- Hero section -->
 <section class="hero-section">
   <div class="hero-slider owl-carousel">
-    <div class="hs-item set-bg" data-setbg="img/bg.jpg">
+    <div class="hs-item set-bg" data-setbg="<?php echo  get_template_directory_uri() .  "/img/bg.jpg" ?>">
       <div class="container">
         <div class="row">
           <div class="col-xl-6 col-lg-7 text-white">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="hs-item set-bg" data-setbg="img/bg-2.jpg">
+    <div class="hs-item set-bg" data-setbg="<?php echo  get_template_directory_uri() .  "/img/bg-2.jpg";?>">
       <div class="container">
         <div class="row">
           <div class="col-xl-6 col-lg-7 text-white">
@@ -47,6 +47,39 @@
 <!-- Hero section end -->
 
 
+
+<!-- Features section -->
+<section class="features-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="<?php echo  get_template_directory_uri() .   "/img/icons/1.png";?>"   alt="#">
+          </div>
+          <h2>Fast Secure Payments</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="<?php echo  get_template_directory_uri() .   "/img/icons/2.png";?>" alt="#">
+          </div>
+          <h2>Premium Products</h2>
+        </div>
+      </div>
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="<?php echo  get_template_directory_uri() .   "/img/icons/3.png";?>" alt="#">
+          </div>
+          <h2>Free & fast Delivery</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features section end -->
 
 
 
