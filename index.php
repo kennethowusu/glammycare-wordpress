@@ -90,72 +90,49 @@
       <h2>LATEST PRODUCTS</h2>
     </div>
     <div class="product-slider owl-carousel">
-      <div class="product-item">
-        <div class="pi-pic">
-          <img src="./img/product/1.jpg" alt="">
-          <div class="pi-links">
-            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-          </div>
-        </div>
-        <div class="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="pi-pic">
-          <div class="tag-new">New</div>
-          <img src="./img/product/2.jpg" alt="">
-          <div class="pi-links">
-            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-          </div>
-        </div>
-        <div class="pi-text">
-          <h6>$35,00</h6>
-          <p>Black and White Stripes Dress</p>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="pi-pic">
-          <img src="./img/product/3.jpg" alt="">
-          <div class="pi-links">
-            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-          </div>
-        </div>
-        <div class="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
-      <div class="product-item">
-          <div class="pi-pic">
-            <img src="./img/product/4.jpg" alt="">
-            <div class="pi-links">
-              <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-              <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+
+
+      <?php
+      		$args = array(
+      			'post_type' => 'product',
+      			'posts_per_page' => 6
+      			);
+      		$loop = new WP_Query( $args );
+      		if ( $loop->have_posts() ) {
+      			while ( $loop->have_posts() ) : $loop->the_post();
+
+             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+
+
+            ?>
+
+            <div class="product-item">
+              <div class="pi-pic">
+                <div class="tag-new">New</div>
+                <img src="<?php echo $image[0]; ?>" alt="">
+                <div class="pi-links">
+                  <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                  <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                </div>
+              </div>
+              <div class="pi-text">
+                <h6>$35,00</h6>
+                <p><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
+              </div>
             </div>
-          </div>
-          <div class="pi-text">
-            <h6>$35,00</h6>
-            <p>Flamboyant Pink Top </p>
-          </div>
-        </div>
-      <div class="product-item">
-          <div class="pi-pic">
-            <img src="./img/product/6.jpg" alt="">
-            <div class="pi-links">
-              <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-              <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-            </div>
-          </div>
-          <div class="pi-text">
-            <h6>$35,00</h6>
-            <p>Flamboyant Pink Top </p>
-          </div>
-        </div>
+
+          <?php
+      			endwhile;
+      		} else {
+      			echo __( 'No products found' );
+      		}
+      		wp_reset_postdata();
+      	?>
+
+
+
+
+
     </div>
   </div>
 </section>
