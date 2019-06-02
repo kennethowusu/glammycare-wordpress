@@ -870,7 +870,9 @@ ol {
 	transition: all 0.4s ease;
 	text-align: center;
 }
-
+.product-item .product-link{
+	    color: #111111;
+}
 .product-item .pi-links a i {
 	display: inline-block;
 	color: #000;

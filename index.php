@@ -117,7 +117,7 @@
               </div>
               <div class="pi-text">
                 <h6>$35,00</h6>
-                <p><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
+                <p><a class="product-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
               </div>
             </div>
 
@@ -138,6 +138,84 @@
 </section>
 <!-- letest product section end -->
 
+
+
+
+
+<!-- Product filter section -->
+<section class="product-filter-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>BROWSE MORE PRODUCTS</h2>
+    </div>
+    <ul class="product-filter-menu">
+      <li><a href="#">TOPS</a></li>
+      <li><a href="#">JUMPSUITS</a></li>
+      <li><a href="#">LINGERIE</a></li>
+      <li><a href="#">JEANS</a></li>
+      <li><a href="#">DRESSES</a></li>
+      <li><a href="#">COATS</a></li>
+      <li><a href="#">JUMPERS</a></li>
+      <li><a href="#">LEGGINGS</a></li>
+    </ul>
+
+
+
+
+    <div class="row">
+
+
+      <?php
+          $args = array(
+            'post_type' => 'product',
+            'posts_per_page' => 12
+            );
+          $loop = new WP_Query( $args );
+          if ( $loop->have_posts() ) {
+            while ( $loop->have_posts() ) : $loop->the_post();
+
+             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+
+
+            ?>
+
+
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="product-item">
+                <div class="pi-pic">
+                    <img src="<?php echo $image[0]; ?>" alt="">
+                  <div class="pi-links">
+                    <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                    <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                  </div>
+                </div>
+                <div class="pi-text">
+                  <h6>$35,00</h6>
+                  <p><a class="product-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
+                </div>
+              </div>
+            </div>
+
+          <?php
+            endwhile;
+          } else {
+            echo __( 'No products found' );
+          }
+          wp_reset_postdata();
+        ?>
+
+
+
+
+
+    </div>
+    <div class="text-center pt-5">
+      <button class="site-btn sb-line sb-dark">LOAD MORE</button>
+    </div>
+  </div>
+</section>
+<!-- Product filter section end -->
 
 
 
