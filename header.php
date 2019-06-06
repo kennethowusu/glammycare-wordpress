@@ -1,10 +1,17 @@
+<?php
+
+	$cart = new WC_Cart();
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Divisima | eCommerce Template</title>
+	<title>Glammycare </title>
 	<meta charset="UTF-8">
-	<meta name="description" content=" Divisima | eCommerce Template">
-	<meta name="keywords" content="divisima, eCommerce, creative, html">
+	<meta name="description" content=" Glammycare ">
+	<meta name="keywords" content="Glammycare, eCommerce, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
@@ -20,7 +27,9 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
+  <script type="text/javascript">
+  	   var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+  </script>
 </head>
 <body>
 
@@ -38,7 +47,7 @@
 					</div>
 					<div class="col-xl-6 col-lg-5">
 						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
+							<input type="text" placeholder="Search on Glammycare ....">
 							<button><i class="flaticon-search"></i></button>
 						</form>
 					</div>
@@ -51,7 +60,7 @@
 							<div class="up-item">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
-									<span>0</span>
+									<span><?php echo $cart->get_cart_contents_count( ) ?></span>
 								</div>
 								<a href="#">Shopping Cart</a>
 							</div>

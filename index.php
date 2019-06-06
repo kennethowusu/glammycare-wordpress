@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-7 text-white">
             <span>New Arrivals</span>
-            <h2>denim jackets</h2>
+            <h2>HAIR</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
             <a href="#" class="site-btn sb-line">DISCOVER</a>
             <a href="#" class="site-btn sb-white">ADD TO CART</a>
@@ -109,14 +109,20 @@
             <div class="product-item">
               <div class="pi-pic">
                 <div class="tag-new">New</div>
-                <img src="<?php echo $image[0]; ?>" alt="">
+
+                <a class="product-link" href="<?php echo get_permalink(); ?>">
+
+                    <img src="<?php echo $image[0]; ?>" alt="">
+
+                </a>
+
                 <div class="pi-links">
                   <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                   <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                 </div>
               </div>
               <div class="pi-text">
-                <h6>$35,00</h6>
+                <h6>&#8373;<?php echo $product->get_price(); ?></h6>
                 <p><a class="product-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
               </div>
             </div>
@@ -184,14 +190,18 @@
             <div class="col-lg-3 col-sm-6">
               <div class="product-item">
                 <div class="pi-pic">
-                    <img src="<?php echo $image[0]; ?>" alt="">
+                  <a class="product-link" href="<?php echo get_permalink(); ?>">
+
+                      <img src="<?php echo $image[0]; ?>" alt="">
+
+                  </a>
                   <div class="pi-links">
                     <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                     <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                   </div>
                 </div>
                 <div class="pi-text">
-                  <h6>$35,00</h6>
+                  <h6>&#8373;<?php echo $product->get_price(); ?></h6>
                   <p><a class="product-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p>
                 </div>
               </div>

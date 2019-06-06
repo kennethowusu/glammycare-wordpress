@@ -222,4 +222,23 @@ $(window).on('load', function() {
 
 
 
+  //=============add to cart=============//
+function glammycare_add_to_cart(){
+
+	$(".add-to-cart-btn").on('click',function(){
+		const postId = $("#single-quantity").attr('post-id');
+		const quantity  = $("#single-quantity").val();
+		const data  = {postId:postId,quantity:quantity,action:'glammycare_add_to_cart'};
+		
+		$.ajax({
+			type:'post',
+			url: ajaxurl,
+			data:data
+		})
+		.done(function(returnedData){
+		 console.log(returnedData);
+		})
+	})
+}
+glammycare_add_to_cart();
 })(jQuery);

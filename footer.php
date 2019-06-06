@@ -6,14 +6,14 @@
 				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-4 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>About</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+						<p>Glammycare is ...... Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
 						<img src="img/cards.png" alt="">
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-4 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>Questions</h2>
 						<ul>
@@ -33,47 +33,25 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
-						<div class="fw-latest-post-widget">
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
-								<div class="lp-content">
-									<h6>what shoes to wear</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
-								<div class="lp-content">
-									<h6>trends this year</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
+
+				<div class="col-lg-4 col-sm-6">
 					<div class="footer-widget contact-widget">
-						<h2>Questions</h2>
+						<h2>address</h2>
 						<div class="con-info">
 							<span>C.</span>
-							<p>Your Company Ltd </p>
+							<p>Glammy Care </p>
 						</div>
 						<div class="con-info">
 							<span>B.</span>
-							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+							<p>Tema, CA 93424, P.O. BOX 68 </p>
 						</div>
 						<div class="con-info">
 							<span>T.</span>
-							<p>+53 345 7953 32453</p>
+							<p>+233 557 756 678</p>
 						</div>
 						<div class="con-info">
 							<span>E.</span>
-							<p>office@youremail.com</p>
+							<p>admin@glammycare.com</p>
 						</div>
 					</div>
 				</div>

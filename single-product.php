@@ -100,9 +100,9 @@
 					</div>
 					<div class="quantity">
 						<p>Quantity</p>
-                        <div class="pro-qty"><input type="text" value="1"></div>
+                        <div class="pro-qty"><input id="single-quantity" post-id="<?php echo $product->get_id(); ?>" type="text" value="1"></div>
                     </div>
-					<a href="#" class="site-btn">SHOP NOW</a>
+					<a href="#" class="site-btn add-to-cart-btn">Add to cart</a>
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
 							<div class="panel-header" id="headingOne">
@@ -116,12 +116,12 @@
 						</div>
 						<div class="panel">
 							<div class="panel-header" id="headingTwo">
-								<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">care details </button>
+								<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">More Info </button>
 							</div>
 							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 								<div class="panel-body">
-									<img src="./img/cards.png" alt="">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
+
+									<?php echo $product->description;?>
 								</div>
 							</div>
 						</div>
@@ -133,7 +133,6 @@
 								<div class="panel-body">
 									<h4>7 Days Returns</h4>
 									<p>Cash on Delivery Available<br>Home Delivery <span>3 - 4 days</span></p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
 								</div>
 							</div>
 						</div>
@@ -153,6 +152,8 @@
 
 
 	<!-- RELATED PRODUCTS section -->
+
+	<!--
 	<section class="related-product-section">
 		<div class="container">
 			<div class="section-title">
@@ -228,7 +229,9 @@
 			</div>
 		</div>
 	</section>
-	<!-- RELATED PRODUCTS section end -->
+-->
+
+
 
 
 
