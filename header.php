@@ -1,8 +1,3 @@
-<?php
-
-	$cart = new WC_Cart();
-
- ?>
 
 
 <!DOCTYPE html>
@@ -60,7 +55,7 @@
 							<div class="up-item">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
-									<span><?php echo $cart->get_cart_contents_count( ) ?></span>
+								
 								</div>
 								<a href="#">Shopping Cart</a>
 							</div>
