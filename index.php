@@ -144,8 +144,6 @@
 
 
 
-
-
 <!-- Product filter section -->
 <section class="product-filter-section">
   <div class="container">
@@ -153,14 +151,24 @@
       <h2>BROWSE MORE PRODUCTS</h2>
     </div>
     <ul class="product-filter-menu">
-      <li><a href="#">TOPS</a></li>
-      <li><a href="#">JUMPSUITS</a></li>
-      <li><a href="#">LINGERIE</a></li>
-      <li><a href="#">JEANS</a></li>
-      <li><a href="#">DRESSES</a></li>
-      <li><a href="#">COATS</a></li>
-      <li><a href="#">JUMPERS</a></li>
-      <li><a href="#">LEGGINGS</a></li>
+
+
+       <?php
+           $terms_args = array(
+             'taxonomy'=>'product_cat'
+           );
+
+          $terms = get_terms($terms_args);
+
+       ?>
+      <?php if(is_array($terms)): ?>
+      <?php foreach($terms as $term): ?>
+      <li><a href="<?php echo get_term_link($term->term_id) ?>"><?php echo $term->name; ?></a></li>
+
+
+    <?php endforeach;endif; ?>
+      <?php  ?>
+
     </ul>
 
 
